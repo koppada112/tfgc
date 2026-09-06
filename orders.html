@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Thapaswini Fashion Gold Covering</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="simple-header">
+        <a href="cart.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Checkout</h2>
+    </header>
+
+
+    <main class="checkout-container">
+
+        <!-- Customer Details -->
+        <div class="checkout-box">
+
+            <h3>Delivery Address</h3>
+
+            <input type="text" id="customerName" placeholder="Full Name">
+
+            <input type="tel" id="customerPhone" placeholder="Phone Number">
+
+            <textarea id="customerAddress"
+                placeholder="Enter Complete Address"></textarea>
+
+            <input type="text" id="customerPincode" placeholder="Pincode">
+
+        </div>
+
+
+        <!-- Order Summary -->
+        <div class="checkout-box">
+
+            <h3>Order Summary</h3>
+
+            <div id="orderItems"></div>
+
+            <div class="order-total">
+                <span>Total Amount</span>
+                <strong id="totalAmount">₹0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Payment -->
+        <div class="checkout-box">
+
+            <h3>Payment Method</h3>
+
+            <div class="payment-option">
+                <input type="radio" name="payment" value="COD" checked>
+                <span>Cash on Delivery</span>
+            </div>
+
+        </div>
+
+
+        <button class="place-order-btn" onclick="placeOrder()">
+            Place Order
+        </button>
+
+    </main>
+
+
+    <script type="module" src="order.js"></script>
+
+</body>
+
+</html>

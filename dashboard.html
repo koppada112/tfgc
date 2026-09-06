@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Thapaswini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ADMIN HEADER -->
+    <header class="admin-header">
+
+        <div class="admin-brand">
+
+            <img src="assets/tfgc logo.png" alt="Logo">
+
+            <div>
+                <h2>Thapaswini</h2>
+                <span>Admin Dashboard</span>
+            </div>
+
+        </div>
+
+        <button class="logout-btn" id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- DASHBOARD CONTENT -->
+
+    <main class="dashboard-container">
+
+        <div class="dashboard-welcome">
+
+            <div>
+                <p class="dashboard-small">ADMIN PANEL 🔐</p>
+
+                <h1>Manage Your Jewellery</h1>
+
+                <p>
+                    Add and manage your latest fashion gold covering collections.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- ADD PRODUCT FORM -->
+
+        <section class="add-product-card">
+
+            <h2>
+                <i class="fa-solid fa-plus"></i>
+                Add New Product
+            </h2>
+
+
+            <form id="productForm">
+
+                <!-- IMAGE -->
+
+                <div class="image-upload-box">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <p>Upload Jewellery Image</p>
+
+                    <input
+                        type="file"
+                        id="productImage"
+                        accept="image/*"
+                    >
+
+                </div>
+
+
+                <!-- PRODUCT NAME -->
+
+                <input
+                    type="text"
+                    id="productName"
+                    placeholder="Product Name"
+                    required
+                >
+
+
+                <!-- PRICE -->
+
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price"
+                    required
+                >
+
+
+                <!-- CATEGORY -->
+
+                <select id="productCategory" required>
+
+                    <option value="">Select Category</option>
+
+                    <option value="Necklaces">Necklaces</option>
+                    <option value="Earrings">Earrings</option>
+                    <option value="Bangles">Bangles</option>
+                    <option value="Rings">Rings</option>
+                    <option value="Bridal">Bridal</option>
+
+                </select>
+
+
+                <!-- DESCRIPTION -->
+
+                <textarea
+                    id="productDescription"
+                    placeholder="Product Description"
+                    rows="4"
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    class="add-product-btn"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+                    Add Product
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- PRODUCTS MANAGEMENT -->
+
+        <section class="admin-products">
+
+            <div class="admin-section-title">
+
+                <h2>Manage Products</h2>
+
+                <span id="productCount">0 Products</span>
+
+            </div>
+
+
+            <div id="adminProductsGrid">
+
+                <div class="admin-empty">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                    <h3>No Products Added Yet</h3>
+
+                    <p>
+                        Add your first jewellery product above.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+       <!-- ORDERS SECTION -->
+
+         <section class="orders-section">
+
+        <h2>Customer Orders</h2>
+
+            <div id="ordersContainer">
+
+        <p>Loading orders...</p>
+
+              </div>
+
+         </section>
+    </main>
+    <!-- EDIT PRODUCT POPUP -->
+
+<div id="editProductModal" class="edit-modal">
+
+    <div class="edit-modal-content">
+
+        <div class="edit-modal-header">
+
+            <h2>
+                <i class="fa-solid fa-pen"></i>
+                Edit Product
+            </h2>
+
+            <button
+                type="button"
+                class="close-edit-modal"
+                onclick="closeEditModal()"
+            >
+                &times;
+            </button>
+
+        </div>
+
+
+        <form id="editProductForm">
+
+            <input type="hidden" id="editProductId">
+
+
+            <label>Product Name</label>
+
+            <input
+                type="text"
+                id="editProductName"
+                required
+            >
+
+
+            <label>Price</label>
+
+            <input
+                type="number"
+                id="editProductPrice"
+                required
+            >
+
+
+            <label>Category</label>
+
+            <select id="editProductCategory" required>
+
+                <option value="Necklaces">Necklaces</option>
+                <option value="Earrings">Earrings</option>
+                <option value="Bangles">Bangles</option>
+                <option value="Rings">Rings</option>
+                <option value="Bridal">Bridal</option>
+
+            </select>
+
+
+            <label>Description</label>
+
+            <textarea
+                id="editProductDescription"
+                rows="4"
+            ></textarea>
+
+
+            <div class="edit-modal-buttons">
+
+                <button
+                    type="button"
+                    class="cancel-edit-btn"
+                    onclick="closeEditModal()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="update-product-btn"
+                >
+                    Update Product
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- DELETE PRODUCT MODAL -->
+
+<div id="deleteProductModal" class="delete-modal">
+
+    <div class="delete-modal-content">
+
+        <div class="delete-icon">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+
+        <h2>Delete Product?</h2>
+
+        <p>
+            Are you sure you want to permanently delete this jewellery product?
+        </p>
+
+        <div class="delete-modal-buttons">
+
+            <button
+                type="button"
+                class="cancel-delete-btn"
+                onclick="closeDeleteModal()"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="confirm-delete-btn"
+                onclick="confirmDeleteProduct()"
+            >
+                Delete
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

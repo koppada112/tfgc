@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Thapaswini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="admin-login-page">
+
+        <div class="admin-login-box">
+
+            <div class="admin-logo">
+                <img src="assets/tfgc logo.png" alt="Thapaswini Logo">
+            </div>
+
+            <h1>Admin Login</h1>
+
+            <p class="admin-subtitle">
+                Thapaswini Fashion Gold Covering
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="Enter admin email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="admin-login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="admin-note">
+                <i class="fa-solid fa-shield-halved"></i>
+                Restricted access for authorized administrators only
+            </p>
+
+            <a href="index.html" class="back-home">
+                ← Back to Website
+            </a>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="admin.js"></script>
+
+<!-- CUSTOMER ORDERS SECTION -->
+
+<section class="admin-section" id="orders">
+
+    <h2>Customer Orders</h2>
+
+    <div id="adminOrders">
+
+        <p class="loading-text">
+            Loading customer orders...
+        </p>
+
+    </div>
+
+</section>
+</body>
+</html>

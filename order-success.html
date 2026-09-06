@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful | Thapaswini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-header">
+
+            <div class="brand">
+
+                <img
+                    src="assets/tfgc logo.png"
+                    alt="Thapaswini Logo"
+                >
+
+                <div class="brand-text">
+
+                    <h2>Thapaswini</h2>
+
+                    <span>
+                        Fashion Gold Covering
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- SUCCESS -->
+
+    <main class="order-success-section">
+
+        <div class="order-success-card">
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+            <h1>
+                Order Placed Successfully! 🎉
+            </h1>
+
+            <p class="success-message">
+                Thank you for shopping with Thapaswini.
+            </p>
+
+
+            <div class="success-details">
+
+                <p>
+                    <span>Order ID</span>
+
+                    <strong id="successOrderId">
+                        Loading...
+                    </strong>
+                </p>
+
+                <p>
+                    <span>Total Amount</span>
+
+                    <strong id="successTotal">
+                        Loading...
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <div class="success-actions">
+
+                <a
+                    href="orders.html"
+                    class="success-orders-btn"
+                >
+                    <i class="fa-solid fa-box"></i>
+
+                    View My Orders
+
+                </a>
+
+
+                <a
+                    href="products.html"
+                    class="success-shop-btn"
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    Continue Shopping
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const orderId =
+            localStorage.getItem("lastOrderId");
+
+        const orderTotal =
+            localStorage.getItem("lastOrderTotal");
+
+
+        document.getElementById(
+            "successOrderId"
+        ).textContent =
+            orderId
+                ? "#" + orderId.slice(0, 10)
+                : "Order placed";
+
+
+        document.getElementById(
+            "successTotal"
+        ).textContent =
+            orderTotal
+                ? "₹" + orderTotal
+                : "Confirmed";
+
+    </script>
+
+</body>
+
+</html>

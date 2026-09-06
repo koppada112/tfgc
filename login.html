@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Thapaswini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-box">
+
+            <!-- LOGO -->
+
+            <div class="login-logo">
+
+                <img src="assets/tfgc logo.png" alt="Thapaswini Logo">
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1 id="formTitle">Welcome Back</h1>
+
+            <p class="login-subtitle" id="formSubtitle">
+                Login to continue shopping
+            </p>
+
+
+            <!-- LOGIN / SIGNUP FORM -->
+
+            <form id="customerAuthForm">
+
+
+                <!-- NAME (ONLY SIGNUP) -->
+
+                <div class="auth-input signup-name">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input
+                        type="text"
+                        id="customerFullName"
+                        placeholder="Full Name"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="auth-input">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="Email Address"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="auth-input">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="customerPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="customer-auth-btn"
+                    id="authButton"
+                >
+                    Login
+                </button>
+
+            </form>
+
+
+            <!-- SWITCH -->
+
+            <p class="switch-auth">
+
+                <span id="switchText">
+                    Don't have an account?
+                </span>
+
+                <button id="switchAuthBtn">
+                    Sign Up
+                </button>
+
+            </p>
+
+
+            <a href="index.html" class="guest-link">
+                Continue as Guest
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="login.js"></script>
+
+</body>
+
+</html>

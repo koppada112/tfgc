@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Rate Product | Thapaswini</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="rating-header">
+
+        <a href="myorders.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Rate Product</h2>
+
+    </header>
+
+
+    <!-- RATING SECTION -->
+
+    <main class="rating-container">
+
+
+        <div class="rating-card">
+
+
+            <!-- PRODUCT DETAILS -->
+
+            <div id="ratingProduct">
+
+                <!-- Product details load here -->
+
+            </div>
+
+
+            <h3>How was your product?</h3>
+
+            <p class="rating-subtitle">
+                Tap a star to rate your experience
+            </p>
+
+
+            <!-- STARS -->
+
+            <div class="star-rating">
+
+                <i class="fa-regular fa-star"
+                    data-rating="1"></i>
+
+                <i class="fa-regular fa-star"
+                    data-rating="2"></i>
+
+                <i class="fa-regular fa-star"
+                    data-rating="3"></i>
+
+                <i class="fa-regular fa-star"
+                    data-rating="4"></i>
+
+                <i class="fa-regular fa-star"
+                    data-rating="5"></i>
+
+            </div>
+
+
+            <!-- REVIEW -->
+
+            <textarea
+                id="reviewText"
+                placeholder="Write your review (optional)"
+            ></textarea>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                class="submit-rating-btn"
+                onclick="submitRating()"
+            >
+
+                <i class="fa-solid fa-star"></i>
+
+                Submit Rating
+
+            </button>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script type="module"
+        src="rating.js">
+    </script>
+
+
+</body>
+
+</html>

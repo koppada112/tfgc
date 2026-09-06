@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Thapaswini Fashion Gold Covering</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="checkout-header">
+
+        <a href="cart.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h2>Checkout</h2>
+
+    </header>
+
+
+    <main class="checkout-container">
+
+
+        <!-- DELIVERY ADDRESS -->
+        <section class="checkout-box">
+
+            <h3>
+                <i class="fa-solid fa-location-dot"></i>
+                Delivery Address
+            </h3>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="customerName"
+                    placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" id="customerPhone"
+                    placeholder="Enter mobile number">
+            </div>
+
+            <div class="form-group">
+                <label>Complete Address</label>
+                <textarea id="customerAddress"
+                    placeholder="House No, Street, Area"></textarea>
+            </div>
+
+            <div class="address-row">
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="customerCity"
+                        placeholder="City">
+                </div>
+
+                <div class="form-group">
+                    <label>Pincode</label>
+                    <input type="text" id="customerPincode"
+                        placeholder="Pincode">
+                </div>
+
+            </div>
+        <!-- SAVED ADDRESSES -->
+
+<div id="savedAddressesCheckout">
+
+    <!-- Saved addresses will appear here -->
+
+</div>
+
+
+<div class="use-new-address">
+
+    <span>Or enter a new delivery address</span>
+
+</div>
+        </section>
+
+
+        <!-- ORDER SUMMARY -->
+        <section class="checkout-box">
+
+            <h3>
+                <i class="fa-solid fa-bag-shopping"></i>
+                Order Summary
+            </h3>
+
+            <div id="orderItems">
+                <!-- Products will appear here -->
+            </div>
+
+            <div class="checkout-total">
+
+                <span>Total Amount</span>
+
+                <strong id="totalAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAYMENT METHOD -->
+        <section class="checkout-box">
+
+            <h3>
+                <i class="fa-solid fa-credit-card"></i>
+                Payment Method
+            </h3>
+
+
+            <label class="payment-option">
+
+                <input type="radio"
+                    name="payment"
+                    value="Cash on Delivery"
+                    checked>
+
+                <div class="payment-info">
+
+                    <i class="fa-solid fa-money-bill-wave"></i>
+
+                    <div>
+                        <strong>Cash on Delivery</strong>
+                        <p>Pay when your order arrives</p>
+                    </div>
+
+                </div>
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input type="radio"
+                    name="payment"
+                    value="Online Payment">
+
+                <div class="payment-info">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    <div>
+                        <strong>Online Payment</strong>
+                        <p>UPI, Google Pay, PhonePe and more</p>
+                    </div>
+
+                </div>
+
+            </label>
+
+        </section>
+
+
+        <!-- PLACE ORDER BUTTON -->
+
+        <button class="place-order-btn" onclick="placeOrder()">
+
+            <i class="fa-solid fa-lock"></i>
+            Place Order
+
+        </button>
+
+
+    </main>
+
+
+    <!-- CHECKOUT JS -->
+    <script type="module" src="checkout.js"></script>
+
+</body>
+
+</html>
